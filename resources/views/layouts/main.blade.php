@@ -13,7 +13,7 @@
     <header class="bg-secondary text-white my5">
         <div class="container">
             <a class="btn text-white" href="{{ url('/') }}">
-                <h1>Movie</h1>
+                <h1>Movies</h1>
             </a>
         </div>
     </header>
