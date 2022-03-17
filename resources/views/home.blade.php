@@ -11,23 +11,29 @@
 
 <body>
     <div class="container">
-        <h1>Movie</h1>
-        <div class="row">
-            
-            @forelse($movies as $movie)
-                <div class="card col-5" style="width: 18rem;">
+        <header>
+            <h1>Movie</h1>
+        </header>
+        <main>
+            <div class="row">
+                @forelse($movies as $movie)
+                <div class="card col-4 border border-primary m-2" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title h2">Titolo: {{$movie->title}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted h3">Titolo originale: {{ $movie->original_title }}</h6>
-                        <p class="card-text">Nazione: {{ $movie->nationality }}</p>
-                        <p class="card-text">Data di uscita: {{ $movie->date }}</p>
-                        <p class="card-text">Voto: {{ $movie->vote }}</p>
+                        <div class="header-card" style="height: 75px;">
+                            <h5 class="card-title ">{{$movie->title}}</h5>
+                            <h6 class="card-subtitle border-bottom border-info mb-2 text-muted">{{ $movie->original_title }}</h6>
+                        </div>
+                        <p class="card-text"><span>Nazione: </span> {{ $movie->nationality }}</p>
+                        <p class="card-text"><span>Data di uscita: </span> {{ $movie->date }}</p>
+                        <p class="card-text"><span>Voto: </span> {{ $movie->vote }}</p>
+                        <a href="#">Scopri di più</a>
                     </div>
                 </div>
                 @empty
                 <h2>NON CI SONO MOVIE DISPONIBILI</h2>
                 @endforelse
-        </div>
+            </div>
+        </main>
     </div>
 </body>
 
