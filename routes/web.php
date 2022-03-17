@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 //ROTTA DELLA HOME CON LA LISTA DEI MOVIE
 Route::get('/','MovieController@index')->name('home');
+Route::get('/movie/{id}','MovieController@show')->name('movies.show');
